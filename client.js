@@ -2,9 +2,9 @@ var inf = Timers.GetContext().Get("inf");
 
 var t = Timers.GetContext().Get("t");
 
-Teams.Add("1", "ФАРМ", { g: 0.10 });
+Teams.Add("1", "|ФАРМ|", { g: 0.5 });
 
-Teams.Add("2", "ФАРМ", { g: 0.10 });
+Teams.Add("2", "|ФАРМ|", { g: 0.5 });
 
 TeamsBalancer.IsAutoBalance = true;
 
@@ -14,7 +14,7 @@ Teams.OnRequestJoinTeam.Add(function (p, team) {
 
     p.Spawns.Spawn();
 
-    p.Properties.Kills.Value = 10000000000;
+    p.Properties.Kills.Value = 1000;
 
     p.Properties.Scores.Value = 1000000;
 
@@ -40,7 +40,7 @@ inf.OnTimer.Add(function () {
 
         }
 
-        e.Current.Properties.Scores.Value += 1000000;
+        e.Current.Properties.Scores.Value += 10000;
 
         e.Current.Properties.Kills.Value += 100;
 
