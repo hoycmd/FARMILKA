@@ -2,9 +2,9 @@ var inf = Timers.GetContext().Get("inf");
 
 var t = Timers.GetContext().Get("t");
 
-Teams.Add("1", "Фарм", { g: 0.7 });
+Teams.Add("1", "<|ФАРМ|>", { g: 0.5 });
 
-Teams.Add("2", "Фарм", { g: 0.7 });
+Teams.Add("2", "<|ФАРМ|>", { g: 0.5 });
 
 TeamsBalancer.IsAutoBalance = true;
 
